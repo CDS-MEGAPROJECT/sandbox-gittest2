@@ -1,14 +1,14 @@
-# {{SANDBOX_NAME}}
+# gittest2
 
 ## Project Overview
-{{PROJECT_DESCRIPTION}}
+This is a test sandbox for demonstration only. This demo will show the request and provisioning process 
 
 ## Sandbox Configuration
-- **Tier**: {{TIER}}
-- **vCPU**: {{TIER_VCPU}}
-- **Memory**: {{TIER_MEMORY}} MB
-- **S3 Storage Limit**: {{TIER_S3_LIMIT}} GB
-- **Database Storage Limit**: {{TIER_DB_LIMIT}} GB
+- **Tier**: standard
+- **vCPU**: 0.5
+- **Memory**: 1024 MB
+- **S3 Storage Limit**: 25 GB
+- **Database Storage Limit**: 5 GB
 
 ## Tech Stack
 - **Runtime**: Node.js 20 + TypeScript (strict mode)
@@ -57,10 +57,10 @@ tests/
 - `SANDBOX_NAME` — Display name for this sandbox
 
 ## Resource Limits
-This sandbox runs on the **{{TIER}}** tier. Respect these limits:
-- CPU: {{TIER_VCPU}} vCPU
-- Memory: {{TIER_MEMORY}} MB
-- S3: {{TIER_S3_LIMIT}} GB
-- Database: {{TIER_DB_LIMIT}} GB
+This sandbox runs on the **standard** tier. Respect these limits:
+- CPU: 0.5 vCPU
+- Memory: 1024 MB
+- S3: 25 GB
+- Database: 5 GB
 
 Exceeding these limits may trigger automatic hibernation.
