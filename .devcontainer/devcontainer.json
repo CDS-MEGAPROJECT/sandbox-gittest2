@@ -1,0 +1,33 @@
+{
+  "name": "Forge Sandbox",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "API key for Claude Code"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "rangav.vscode-thunder-client"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+  "forwardPorts": [3000, 5432],
+  "remoteEnv": {
+    "DATABASE_URL": "postgresql://forge:forge@db:5432/forge"
+  }
+}
